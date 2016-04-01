@@ -14,7 +14,7 @@
 		</div>
 		<div class="right menu">
 			<div class="item">
-				<a href="driver.html" class="ui pink tiny button">Connexion</a>
+				<a href="driver.html" class="ui inverted pink tiny button">Connexion</a>
 			</div>
 			<div class="item">
 				<a href="#" class="ui red tiny button">Inscription</a>
@@ -46,6 +46,28 @@
 			<h3 style=color:red>{{message.first_named}}</h3>
 		</div>    
 	</div>
+
+	<!--footer-->
+	<div class="ui vertical footer segment fouteur">
+		<div class="ui center aligned container bandeau_footer">
+			<img src="logo.svg" class="ui centered small image logo_footer">
+			<div class="row liste_footer">
+				<div class="ui horizontal small divided link list">
+					<a class="item" href="#">Mentions légales</a>
+					<a class="item" href="#">FAQ</a>
+					<a class="item" href="#">Contactez-nous !</a>
+					<a class="item" href="#">Privacy Policy</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui horizontal small divided link list">
+					<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
+					<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
@@ -70,7 +92,7 @@
 					message : message
 				}
 			})
-				$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
+			$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
 
 
 
