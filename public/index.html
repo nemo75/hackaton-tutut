@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutut</title>
+	<link rel="stylesheet" href="semantic.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--MENU-->
+	<div class="ui stackable large menu">
+	
+			<img class="logo_accueil" src="logo.svg"/>
+	
+		<div class="right menu">
+			<div class="item">
+				<button class="ui pink tiny button">Connexion</button>
+			</div>
+			<div class="item">
+				<button class="ui red tiny button">Inscription</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui stackable center aligned middle aligned grid">
+		<div class="center aligned middle aligned column">
+			<h2>TuTuT</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugiat sapiente 
+		</div>
+	</div>
+	<div class="ui divider"></div>
+
+	<script src="jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		(function($){
+			var socket = io();
+			console.log("connected");
+		})(jQuery);
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "hackaton-tutut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemo75/hackaton-tutut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nemo75/hackaton-tutut/issues"
+  },
+  "homepage": "https://github.com/nemo75/hackaton-tutut#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1",
+    "semantic-ui-css": "^2.1.8",
+    "socket.io": "^1.4.5"
+  }
+}
