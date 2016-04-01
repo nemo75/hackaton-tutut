@@ -30,21 +30,11 @@ body {
 
 .bandeau_cta {
 	background-color: #26A69A;
-	height: 30%;
+	height: 35%;
 }
 
-.boutons_cta {
-	position:relative;
-	top: 37%;
-  	left:40%;
-}
-
-.bouton_cherche {
-	margin-right: 10px;
-}
-
-.bouton_propose {
-	margin-left: 10px;
+.boutons.boutons.boutons.boutons {
+	margin-top: 5%;
 }
 
 .bandeau_description {
