@@ -22,14 +22,14 @@
 		</div>
 	</div>
 	<div class="formulaire">
-		<form class="ui form" action="/" method="post" id="formulaire_chat">
+		<form class="ui form" action="driver.html" method="post" id="form_demande_driver">
 			<div class="field">
 				<label>First Name</label>
-				<input type="text" name="first-name" placeholder="First Name">
+				<input type="text" name="first-name" placeholder="First Name" id="first_name">
 			</div>
 			<div class="field">
 				<label>Last Name</label>
-				<input type="text" name="last-name" placeholder="Last Name">
+				<input type="text" name="last-name" placeholder="Last Name" id="last_name">
 			</div>
 			<div class="field">
 				<div class="ui checkbox">
@@ -39,15 +39,27 @@
 			</div>
 			<button class="ui button" type="submit">Submit</button>
 		</form>
+		</form>
 	</div>
-
+<div id="driver"></div>
 
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		(function($){
 			var socket = io();
-			console.log("connected");
+			
+			$('#form_demande_driver').submit(function(event){
+				event.preventDefault();
+				socket.emit('msg_driver',{
+					first_named: $('#first_name').val(),
+					last_name: $('#last_name').val(),
+				})
+			})
+
+			socket.on('msg_livre', function(message){
+				$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
+			})
 		})(jQuery);
 	</script>
 </body>

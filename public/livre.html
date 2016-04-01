@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Driver</title>
+	<title>liver</title>
 	<link rel="stylesheet" href="semantic.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -22,14 +22,14 @@
 		</div>
 	</div>
 	<div class="formulaire">
-		<form class="ui form" action="/" method="post" id="formulaire_chat">
+		<form class="ui form" action="driver.html" method="post" id="form_demande_livre">
 			<div class="field">
 				<label>First Name</label>
-				<input type="text" name="first-name" placeholder="First Name">
+				<input type="text" name="first-name" placeholder="First Name" id="first_name">
 			</div>
 			<div class="field">
 				<label>Last Name</label>
-				<input type="text" name="last-name" placeholder="Last Name">
+				<input type="text" name="last-name" placeholder="Last Name" id="last_name">
 			</div>
 			<div class="field">
 				<div class="ui checkbox">
@@ -40,15 +40,47 @@
 			<button class="ui button" type="submit">Submit</button>
 		</form>
 	</div>
-
+	<div id="test"></div>
+	<div id="messages">
+		<div class="message" id= "msgtpl" style="display:none;">
+		<h3 style="color:red">{{message.first_named}}</h3>
+		</div>    
+	</div>
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		(function($){
 			var socket = io();
+			var msgtpl = $('#msgtpl').html();
+			$('#msgtpl').remove();
 			
+			$('#form_demande_livre').submit(function(event){
+				event.preventDefault();
+				socket.emit('msg_livre',{
+					first_name: $('#first_name').val(),
+					last_name: $('#last_name').val(),
+				})
+			})
+
+			socket.on('msg_driver', function(message){
+				Mustache.render(msgtpl, message);
+				$('#test').append('<div id="' + message.id + '">' + '<h2>' + message.first_named + '</h2> </div>');
+				$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, message) + '<p>salut</p>' + '</div>');
+				console.log(msgtpl);
+			})
+
+
+
+
+			// socket.on('stackmsg', function(messsage){
+			// 	console.log(msgtpl)
+			// 	Mustache.render(msgtpl, message);
+			// 	$('#msgtpl').append('<div class="message">' +  Mustache.render(msgtpl, message) + salut + '</div>');
+			// })
+
+
 		})(jQuery);
 	</script>
-	 <script src="mustache.js"></script>
+	<script src="mustache.js"></script>
 </body>
 </html>

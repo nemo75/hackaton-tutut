@@ -5,21 +5,32 @@ var io = require('socket.io').listen(server);
 
 
 app.use(express.static(__dirname + '/public'));
-server.listen(8000);
+server.listen(3000);
 
 io.sockets.on('connection', function(socket) {
-	var messages = [];
+	var messages_driver = [];
+	var messages_livre = [];
+	var history = 15;
 
 
-	for(var k in messages) {
-		socket.emit('stackmsg', messages[k]);
+	for(var k in messages_driver) {
+		socket.emit('msg_livre', messages_driver[k]);
+	}
+	for(var k in messages_livre) {
+		socket.emit('msg_driver', messages_livre[k]);
 	}
 
-	socket.on('msg', function(message){
+	socket.on('msg_livre', function(message){
 		me = message;
 		me.id = message.id;
 		socket.emit('send');
-		messages[me.id] = me;
-		io.sockets.emit('newmsg', me);
+		io.sockets.emit('msg_livre', me);
+	});
+
+	socket.on('msg_driver', function(message){
+		me = message;
+		me.id = message.id;
+		socket.emit('send');
+		io.sockets.emit('msg_driver', me);
 	});
 });
