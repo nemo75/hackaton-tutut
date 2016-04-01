@@ -6,12 +6,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="semantic.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.css">
 </head>
 <body>
 	<!--MENU-->
 	<div class="ui stackable large menu">
 		<div class="logo">
-			<img class="logo_accueil" src="logo.svg"/>
+			<a href="index.html"> <img class="logo_accueil" src="logo.svg"/> </a>
 		</div>
 		<div class="right stackable menu">	
 			<div class="item">
@@ -47,22 +48,22 @@
 					</select>
 				</div>
 			</div>
-				<label for="">Je suis pret &agrave; faire :</label>
-				<div class="field">
-					<select class="ui fluid search dropdown" name="distance">
-						<option value="">0 &agrave; 10 kilom&egrave;tre</option>
-						<option value="1">10 &agrave; 20 kilom&egrave;tre</option>
-						<option value="1">20 &agrave; 30 kilom&egrave;tre</option>
-					</select>
-				</div>
-				<label for="">Mon vehicule est</label>
-				<div class="field">
-					<select class="ui fluid search dropdown" name="distance">
-						<option value="">Petit</option>
-						<option value="1">Moyenne</option>
-						<option value="1">Grande</option>
-					</select>
-				</div>
+			<label for="">Je suis pret &agrave; faire :</label>
+			<div class="field">
+				<select class="ui fluid search dropdown" name="distance">
+					<option value="">0 &agrave; 10 kilom&egrave;tre</option>
+					<option value="1">10 &agrave; 20 kilom&egrave;tre</option>
+					<option value="1">20 &agrave; 30 kilom&egrave;tre</option>
+				</select>
+			</div>
+			<label for="">Mon vehicule est</label>
+			<div class="field">
+				<select class="ui fluid search dropdown" name="distance">
+					<option value="">Petit</option>
+					<option value="1">Moyenne</option>
+					<option value="1">Grande</option>
+				</select>
+			</div>
 			<div class="field">
 				<div class="ui checkbox">
 					<input type="checkbox" tabindex="0" class="hidden">
@@ -72,10 +73,98 @@
 			<button class="ui green button" type="submit">Valider</button>
 		</form>
 	</div>
-	<div id="driver"></div>
+	
+
+	<div class="ui stackable centered grid">
+		<div class="eight wide column bloc_annonces">
+			<h3 class="ui centered dividing header">Les annonces</h3>
+			<div class="ui divided items">	
+
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Jane Doe</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a trois jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li>cqlqd</li>
+								<li>kygi</li>
+								<li>lkuho</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Jane Doe</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a trois jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li>cqlqd</li>
+								<li>kygi</li>
+								<li>lkuho</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Jane Doe</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a trois jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li>cqlqd</li>
+								<li>kygi</li>
+								<li>lkuho</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 
 	<!--footer-->
-	<div class="ui vertical footer segment fouteur">
+	<div class="ui vertical footer bottom attached segment fouteur">
 		<div class="ui center aligned container bandeau_footer">
 			<img src="logo.svg" class="ui centered small image logo_footer">
 			<div class="row liste_footer">
@@ -88,8 +177,8 @@
 			</div>
 			<div class="row">
 				<div class="ui horizontal small divided link list">
-					<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
-					<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+					<a class="ui circular facebook icon button" href="https://www.facebook.com/Tutut-1677656342511349/?fref=ts" target="blank"><i class="facebook icon"></i></a>
+					<a class="ui circular twitter icon button" href="https://twitter.com/search?q=tutut&src=typd&lang=fr" target="blank"><i class="twitter icon"></i></a>
 				</div>
 			</div>
 		</div>
