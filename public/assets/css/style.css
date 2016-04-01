@@ -45,7 +45,7 @@ body {
 }
 
 .bandeau_description {
-	background-color: rgba(0, 178, 86, 210);
+	background-color: white;
 }
 
 .titre_description {
@@ -80,5 +80,9 @@ body {
 .formulaire {
 	width : 700px;
 	margin: 0 auto;
+}
+
+.bloc_annonces.bloc_annonces.bloc_annonces.bloc_annonces.bloc_annonces {
+	margin: 40px;
 }
 

@@ -6,12 +6,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="semantic.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.css">
 </head>
 <body>
 	<!--MENU-->
 	<div class="ui stackable large menu">
 		<div class="logo">
-			<img class="logo_accueil" src="logo.svg"/>
+			<a href="index.html"> <img class="logo_accueil" src="logo.svg"/> </a>
 		</div>
 		<div class="right stackable menu">	
 			<div class="item">
@@ -22,8 +23,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="formulaire">
-		<form class="ui form" action="driver.html" method="post" id="form_demande_driver">
+	<div class="formulaire" id="form_driver">
+		<form class="ui form" action="" method="post" id="form_demande_driver">
 			<h4 class="ui centered dividing header">Je propose mes services</h4>
 			<label>Identit&eacute;e</label>
 			<div class="two fields">
@@ -40,27 +41,28 @@
 					<input type="date" name="first-name" placeholder="Date" id="date">
 				</div>
 				<div class="field">
-					<select class="ui fluid search dropdown" name="distance">
-						<option value="">Matin</option>
-						<option value="1">Apr&egrave;s-midi</option>
-						<option value="1">Soir</option>
+					<select class="ui fluid search dropdown" name="distance" id="heure">
+						<option value="le matin">Matin</option>
+						<option value="l'apres-midi">Apr&egrave;s-midi</option>
+						<option value="le soir">Soir</option>
 					</select>
 				</div>
 			</div>
+
 				<label for="">Je suis pret &agrave; faire :</label>
 				<div class="field">
-					<select class="ui fluid search dropdown" name="distance">
-						<option value="">0 &agrave; 10 kilom&egrave;tre</option>
-						<option value="1">10 &agrave; 20 kilom&egrave;tre</option>
-						<option value="1">20 &agrave; 30 kilom&egrave;tre</option>
+					<select class="ui fluid search dropdown" name="distance" id="distance">
+						<option value="entre 0 et 10 km.">0 &agrave; 10 kilom&egrave;tre</option>
+						<option value="entre 10 et 20 km.">10 &agrave; 20 kilom&egrave;tre</option>
+						<option value="entre 20 et 30 km.">20 &agrave; 30 kilom&egrave;tre</option>
 					</select>
 				</div>
 				<label for="">Mon vehicule est</label>
 				<div class="field">
-					<select class="ui fluid search dropdown" name="distance">
-						<option value="">Petit</option>
-						<option value="1">Moyenne</option>
-						<option value="2">Grande</option>
+					<select class="ui fluid search dropdown" name="distance" id="taille">
+						<option value="Petit.">Petit</option>
+						<option value="Moyenn.">Moyen</option>
+						<option value="Grand.">Grand</option>
 					</select>
 				</div>
 			<div class="field">
@@ -72,14 +74,89 @@
 			<button class="ui green button" type="submit">Valider</button>
 		</form>
 	</div>
+
 	<!-- <div id="driver"></div> -->
 
 	<!-- LISTE LIVRE -->
 	
 
 
+	
+	<div class="ui stackable centered grid" id="list_driver" style="display:none;">
+		<div class="eight wide column bloc_annonces">
+			<h3 class="ui centered dividing header">Les annonces ceux qui propose</h3>
+			<div class="ui divided items" id ="driver">	
+
+				
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">doe</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a trois jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li>cqlqd</li>
+								<li>kygi</li>
+								<li>lkuho</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+		<div class="ui stackable centered grid" id ="livre">
+		<div class="eight wide column bloc_annonces">
+			<h3 class="ui centered dividing header">Les annonces recherche</h3>
+			<div class="ui divided items" >	
+
+				
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Die</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a trois jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li>cqlqd</li>
+								<li>kygi</li>
+								<li>lkuho</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 	<!--footer-->
-	<div class="ui vertical footer segment fouteur">
+	<div class="ui vertical footer bottom attached segment fouteur">
 		<div class="ui center aligned container bandeau_footer">
 			<img src="logo.svg" class="ui centered small image logo_footer">
 			<div class="row liste_footer">
@@ -92,31 +169,48 @@
 			</div>
 			<div class="row">
 				<div class="ui horizontal small divided link list">
-					<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
-					<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+					<a class="ui circular facebook icon button" href="https://www.facebook.com/Tutut-1677656342511349/?fref=ts" target="blank"><i class="facebook icon"></i></a>
+					<a class="ui circular twitter icon button" href="https://twitter.com/search?q=tutut&src=typd&lang=fr" target="blank"><i class="twitter icon"></i></a>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- <script src="assets/moment.js"></script> -->
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		(function($){
 			var socket = io();
+			var msgtpl = $('#msgtpl').html();
+			// var moment = require('moment');
+			$('#msgtpl').remove();
 
 			$('#form_demande_driver').submit(function(event){
 				event.preventDefault();
 				socket.emit('msg_driver',{
 					first_named: $('#first_name').val(),
 					last_name: $('#last_name').val(),
-				})
+					heure: $('#heure').val(),
+					date: $('#date').val(),
+					distance: $('#distance').val(),
+					taille: $('#taille').val(),
+				}),
+				$('#list_driver').show();
+				$('#livre').hide();
+				$('#form_driver').hide();
 			})
 
-			socket.on('msg_livre', function(message){
-				$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
+			socket.on('msg_driver', function(message){
+				console.log('yes');
+				// rr = {
+				//  	message : message
+				//  },
+				// Mustache.render(msgtpl, rr)
+				$('#driver').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+  message.first_named + ' ' + message.last_name + ' - '+ '5/5' + '</a><div class="meta"><span class="cinema">Posté a l\'instant</span></div><div class="description"><div class="ui list"><li><em><strong> Disponibilit&eacute; :</strong></em> ' + message.date + ', '+ message.heure + '.' + '</li><li><em><strong>Disponible pour faire</em></strong> : ' + message.distance + '</li><em><strong>Mon v&eacute;hicule est :</em></strong> ' + message.taille + '</div></div><div class="extra"><div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div></div></div></div>');
 			})
 		})(jQuery);
 	</script>
+	<script src="mustache.js"></script>
 </body>
 </html>
