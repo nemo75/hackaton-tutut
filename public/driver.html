@@ -49,22 +49,22 @@
 				</div>
 			</div>
 
-				<label for="">Je suis pret &agrave; faire :</label>
-				<div class="field">
-					<select class="ui fluid search dropdown" name="distance" id="distance">
-						<option value="entre 0 et 10 km.">0 &agrave; 10 kilom&egrave;tre</option>
-						<option value="entre 10 et 20 km.">10 &agrave; 20 kilom&egrave;tre</option>
-						<option value="entre 20 et 30 km.">20 &agrave; 30 kilom&egrave;tre</option>
-					</select>
-				</div>
-				<label for="">Mon vehicule est</label>
-				<div class="field">
-					<select class="ui fluid search dropdown" name="distance" id="taille">
-						<option value="Petit.">Petit</option>
-						<option value="Moyenn.">Moyen</option>
-						<option value="Grand.">Grand</option>
-					</select>
-				</div>
+			<label for="">Je suis pret &agrave; faire :</label>
+			<div class="field">
+				<select class="ui fluid search dropdown" name="distance" id="distance">
+					<option value="entre 0 et 10 km.">0 &agrave; 10 kilom&egrave;tre</option>
+					<option value="entre 10 et 20 km.">10 &agrave; 20 kilom&egrave;tre</option>
+					<option value="entre 20 et 30 km.">20 &agrave; 30 kilom&egrave;tre</option>
+				</select>
+			</div>
+			<label for="">Mon vehicule est</label>
+			<div class="field">
+				<select class="ui fluid search dropdown" name="distance" id="taille">
+					<option value="Petit.">Petit</option>
+					<option value="Moyenne.">Moyen</option>
+					<option value="Grand.">Grand</option>
+				</select>
+			</div>
 			<div class="field">
 				<div class="ui checkbox">
 					<input type="checkbox" tabindex="0" class="hidden">
@@ -84,61 +84,82 @@
 	
 	<div class="ui stackable centered grid" id="list_driver" style="display:none;">
 		<div class="eight wide column bloc_annonces">
+
+			<div class="ui success message">
+				<div class="header">Form Completed</div>
+				<p>You're all signed up for the newsletter.</p>
+			</div>
+
 			<h3 class="ui centered dividing header">Les annonces ceux qui propose</h3>
 			<div class="ui divided items" id ="driver">	
-
-				
 				<div class="item">
 					<div class="image">
 						<img src="card.jpg">
 					</div>
 					<div class="content">
-						<a class="header">doe</a>
+						<a class="header">Marie dupuis - 5/5</a>
 						<div class="meta">
-							<span class="cinema">Posté il y a trois jours</span>
+							<span class="cinema">Posté il y &agrave; 3 jours</span>
 						</div>
 						<div class="description">
 							<div class="ui list">
-								<li>cqlqd</li>
-								<li>kygi</li>
-								<li>lkuho</li>
+								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-15, le soir.</li>
+								<li><em><strong>Disponible pour faire</em></strong> : entre 20 et 30 km.</li>
+								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Petit.</li>
+								</div>
+								<div class="extra">
+									<div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div>
+								</div>
 							</div>
 						</div>
-						<div class="extra">
-							<div class="ui right floated primary button">
-								Réserver ce trajet
-								<i class="right chevron icon"></i>
+					</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Guillaume Dorcel - 5/5</a>
+						<div class="meta">
+							<span class="cinema">Posté il y &agrave; 1 jour</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
+								<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
+								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+								</div>
+								<div class="extra">
+									<div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div>
+								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
 
 
-		<div class="ui stackable centered grid" id ="livre">
+	<div class="ui stackable centered grid" id ="list_livre">
 		<div class="eight wide column bloc_annonces">
 			<h3 class="ui centered dividing header">Les annonces recherche</h3>
-			<div class="ui divided items" >	
+			<div class="ui divided items">
 
-				
 				<div class="item">
 					<div class="image">
 						<img src="card.jpg">
 					</div>
 					<div class="content">
-						<a class="header">Die</a>
+						<a class="header">Gerard Lanvin</a>
 						<div class="meta">
-							<span class="cinema">Posté il y a trois jours</span>
+							<span class="cinema">Posté il y a deux jours</span>
 						</div>
 						<div class="description">
 							<div class="ui list">
-								<li>cqlqd</li>
-								<li>kygi</li>
-								<li>lkuho</li>
+								<li><em><strong>Date :</strong></em></li>
+								<li><em><strong>D&eacute;part : </strong></em></li>
+								<li><em><strong>Arriv&eacute;e</strong></em></li>
+								<li><em><strong>Nombre d'objets :</strong></em></li>
 							</div>
 						</div>
 						<div class="extra">
@@ -146,7 +167,7 @@
 								Réserver ce trajet
 								<i class="right chevron icon"></i>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -175,7 +196,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- <script src="assets/moment.js"></script> -->
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
@@ -197,7 +218,7 @@
 					taille: $('#taille').val(),
 				}),
 				$('#list_driver').show();
-				$('#livre').hide();
+				$('#list_livre').hide();
 				$('#form_driver').hide();
 			})
 
