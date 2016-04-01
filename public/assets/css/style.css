@@ -37,7 +37,7 @@ body {
 .bandeau_cta {
 	text-align: center;
 	background-color: rgba(149, 198, 213, 222);
-	height: 35%;
+	height: 40%;
 }
 
 .boutons.boutons.boutons.boutons {
@@ -73,7 +73,7 @@ body {
 .titre_boutons {
 	font-size: 30px;
 	font-family: Open Sans;
-	padding-top: 25px;
+	padding-top: 40px;
 }
 /* Page driver */ 
 
