@@ -77,6 +77,7 @@
 		(function($){
 			var socket = io();
 			var msgtpl = $('#msgtpl').html();
+			var moment = require('moment');
 			$('#msgtpl').remove();
 			
 			$('#form_demande_livre').submit(function(event){
@@ -87,7 +88,7 @@
 				})
 			})
 
-			socket.on('msg_driver', function(message){
+			socket.on('msg_livre', function(message){
 				// Mustache.render(msgtpl, message);
 				$('#test').append('<div>'+ '<h2>' + message.first_named + '</h2> </div>');
 			})
