@@ -42,8 +42,8 @@
 	</div>
 	<div id="test"></div>
 	<div id="messages">
-		<div class="message" id= "msgtpl" style="display:none;">
-		<h3 style="color:red">{{message.first_named}}</h3>
+		<div class="message" id= "msgtpl">
+			<h3 style=color:red>{{message.first_named}}</h3>
 		</div>    
 	</div>
 	<script src="jquery.min.js"></script>
@@ -63,11 +63,14 @@
 			})
 
 			socket.on('msg_driver', function(message){
-				Mustache.render(msgtpl, message);
-				$('#test').append('<div id="' + message.id + '">' + '<h2>' + message.first_named + '</h2> </div>');
-				$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, message) + '<p>salut</p>' + '</div>');
-				console.log(msgtpl);
+				// Mustache.render(msgtpl, message);
+				$('#test').append('<div>'+ '<h2>' + message.first_named + '</h2> </div>');
+				console.log(msgtpl, message);
+				rr = {
+					message : message
+				}
 			})
+				$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
 
 
 
