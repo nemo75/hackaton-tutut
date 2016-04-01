@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Driver</title>
+	<link rel="stylesheet" href="semantic.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<!--MENU-->
+	<div class="ui stackable large menu">
+		<div class="logo">
+			<img class="logo_accueil" src="logo.svg"/>
+		</div>
+		<div class="right menu">
+			<div class="item">
+				<a href="driver.html" class="ui pink tiny button">Connexion</a>
+			</div>
+			<div class="item">
+				<a href="#" class="ui red tiny button">Inscription</a>
+			</div>
+		</div>
+	</div>
+	<div class="formulaire">
+		<form class="ui form" action="/" method="post" id="formulaire_chat">
+			<div class="field">
+				<label>First Name</label>
+				<input type="text" name="first-name" placeholder="First Name">
+			</div>
+			<div class="field">
+				<label>Last Name</label>
+				<input type="text" name="last-name" placeholder="Last Name">
+			</div>
+			<div class="field">
+				<div class="ui checkbox">
+					<input type="checkbox" tabindex="0" class="hidden">
+					<label>I agree to the Terms and Conditions</label>
+				</div>
+			</div>
+			<button class="ui button" type="submit">Submit</button>
+		</form>
+	</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		(function($){
+			var socket = io();
+			
+		})(jQuery);
+	</script>
+	 <script src="mustache.js"></script>
+</body>
+</html>
