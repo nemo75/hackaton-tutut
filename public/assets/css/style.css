@@ -16,8 +16,8 @@ body {
 	width: 100%;
 }
 
-.bouton_connexion.bouton_connexion.bouton_connexion.bouton_connexion.bouton_connexion {
-	margin-right: 40px;
+.boutons_menu.boutons_menu.boutons_menu.boutons_menu.boutons_menu {
+	display: inline-block;
 }
 
 .bandeau_slogan {
