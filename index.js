@@ -10,7 +10,16 @@ server.listen(3000);
 io.sockets.on('connection', function(socket) {
 	var messages = [];
 
-	socket.on('newmsg', function(message){
-		io.sockets.emit('newmsg', message);
+
+	for(var k in messages) {
+		socket.emit('stackmsg', messages[k]);
+	}
+
+	socket.on('msg', function(message){
+		me = message;
+		me.id = message.id;
+		socket.emit('send');
+		messages[me.id] = me;
+		io.sockets.emit('newmsg', me);
 	});
 });
