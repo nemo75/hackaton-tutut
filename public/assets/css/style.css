@@ -11,7 +11,7 @@
 	width: 100%;
 }
 
-.container {
+.bandeau_slogan {
 	background-size: cover;
 	background-image: url(../../capitole.jpg);
 	height: 560px;
@@ -32,12 +32,23 @@
 
 .bandeau_description {
 	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
-
+.titre_description {
+	text-align: center;
+}
 /* Page driver */ 
 
 .formulaire {
 	width : 700px;
 	margin: 0 auto;
+}
+
+.logo_footer {
+	margin-bottom: 5px;
+}
+
+.liste_footer {
+	margin-bottom: 10px;
 }
