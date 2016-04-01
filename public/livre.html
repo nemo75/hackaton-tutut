@@ -41,11 +41,11 @@
 		</form>
 	</div>
 	<div id="test"></div>
-	<div id="messages">
+<!-- 	<div id="messages">
 		<div class="message" id= "msgtpl">
 			<h3 style=color:red>{{message.first_named}}</h3>
 		</div>    
-	</div>
+	</div> -->
 
 	<!--footer-->
 	<div class="ui vertical footer segment fouteur">
@@ -87,12 +87,13 @@
 			socket.on('msg_driver', function(message){
 				// Mustache.render(msgtpl, message);
 				$('#test').append('<div>'+ '<h2>' + message.first_named + '</h2> </div>');
-				console.log(msgtpl, message);
-				rr = {
-					message : message
-				}
 			})
-			$('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
+			
+
+				// rr = {
+				// 	message : message
+				// }
+			// $('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
 
 
 

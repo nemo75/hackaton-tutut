@@ -14,7 +14,7 @@
 		</div>
 		<div class="right menu">
 			<div class="item">
-				<a href="driver.html" class="ui pink tiny button">Connexion</a>
+				<a href="#" class="ui pink tiny button">Connexion</a>
 			</div>
 			<div class="item">
 				<a href="#" class="ui red tiny button">Inscription</a>
@@ -23,65 +23,95 @@
 	</div>
 	<div class="formulaire">
 		<form class="ui form" action="driver.html" method="post" id="form_demande_driver">
-			<div class="field">
-				<label>Pre</label>
-				<input type="text" name="first-name" placeholder="First Name" id="first_name">
+			<h4 class="ui centered dividing header">Je propose mes services</h4>
+			<label>Identit&eacute;e</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="text" name="first-name" placeholder="Pr&eacute;nom" id="first_name">
+				</div>
+				<div class="field">
+					<input type="text" name="last-name" placeholder="Nom de famille..." id="last_name">
+				</div>
 			</div>
-			<div class="field">
-				<label>Last Name</label>
-				<input type="text" name="last-name" placeholder="Last Name" id="last_name">
+			<label>Disponibilit&eacute;e</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="date" name="first-name" placeholder="Date" id="date">
+				</div>
+				<div class="field">
+					<select class="ui fluid search dropdown" name="distance">
+						<option value="">Matin</option>
+						<option value="1">Apr&egrave;s-midi</option>
+						<option value="1">Soir</option>
+					</select>
+				</div>
 			</div>
+				<label for="">Je suis pret &agrave; faire :</label>
+				<div class="field">
+					<select class="ui fluid search dropdown" name="distance">
+						<option value="">0 &agrave; 10 kilom&egrave;tre</option>
+						<option value="1">10 &agrave; 20 kilom&egrave;tre</option>
+						<option value="1">20 &agrave; 30 kilom&egrave;tre</option>
+					</select>
+				</div>
+				<label for="">Mon vehicule est</label>
+				<div class="field">
+					<select class="ui fluid search dropdown" name="distance">
+						<option value="">Petit</option>
+						<option value="1">Moyenne</option>
+						<option value="1">Grande</option>
+					</select>
+				</div>
 			<div class="field">
 				<div class="ui checkbox">
 					<input type="checkbox" tabindex="0" class="hidden">
 					<label>I agree to the Terms and Conditions</label>
 				</div>
 			</div>
-			<button class="ui button" type="submit">Submit</button>
+			<button class="ui green button" type="submit">Valider</button>
 		</form>
-	</form>
-</div>
-<div id="driver"></div>
+	</div>
+	<div id="driver"></div>
 
-<!--footer-->
-<div class="ui vertical footer segment fouteur">
-	<div class="ui center aligned container bandeau_footer">
-		<img src="logo.svg" class="ui centered small image logo_footer">
-		<div class="row liste_footer">
-			<div class="ui horizontal small divided link list">
-				<a class="item" href="#">Mentions légales</a>
-				<a class="item" href="#">FAQ</a>
-				<a class="item" href="#">Contactez-nous !</a>
-				<a class="item" href="#">Privacy Policy</a>
+	<!--footer-->
+	<div class="ui vertical footer segment fouteur">
+		<div class="ui center aligned container bandeau_footer">
+			<img src="logo.svg" class="ui centered small image logo_footer">
+			<div class="row liste_footer">
+				<div class="ui horizontal small divided link list">
+					<a class="item" href="#">Mentions légales</a>
+					<a class="item" href="#">FAQ</a>
+					<a class="item" href="#">Contactez-nous !</a>
+					<a class="item" href="#">Privacy Policy</a>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="ui horizontal small divided link list">
-				<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
-				<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+			<div class="row">
+				<div class="ui horizontal small divided link list">
+					<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
+					<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<script src="jquery.min.js"></script>
-<script src="/socket.io/socket.io.js"></script>
-<script>
-	(function($){
-		var socket = io();
+	<script src="jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		(function($){
+			var socket = io();
 
-		$('#form_demande_driver').submit(function(event){
-			event.preventDefault();
-			socket.emit('msg_driver',{
-				first_named: $('#first_name').val(),
-				last_name: $('#last_name').val(),
+			$('#form_demande_driver').submit(function(event){
+				event.preventDefault();
+				socket.emit('msg_driver',{
+					first_named: $('#first_name').val(),
+					last_name: $('#last_name').val(),
+				})
 			})
-		})
 
-		socket.on('msg_livre', function(message){
-			$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
-		})
-	})(jQuery);
-</script>
+			socket.on('msg_livre', function(message){
+				$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
+			})
+		})(jQuery);
+	</script>
 </body>
 </html>
