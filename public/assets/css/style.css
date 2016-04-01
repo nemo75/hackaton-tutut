@@ -1,4 +1,7 @@
-/*  Page accueil */
+body {
+	margin: 0;
+	padding: 0;
+}
 
 .logo_accueil {
 	display: block;
@@ -26,23 +29,37 @@
 }
 
 .bandeau_cta {
-	margin-top: 2%;
-	margin-bottom: 2%;
+	background-color: #26A69A;
+	height: 30%;
+}
+
+.boutons_cta {
+	position:relative;
+	top: 37%;
+  	left:40%;
+}
+
+.bouton_cherche {
+	margin-right: 10px;
+}
+
+.bouton_propose {
+	margin-left: 10px;
 }
 
 .bandeau_description {
-	margin-top: 2%;
-	margin-bottom: 2%;
+	background-color: #66BB6A;
+	opacity: 0,5;
 }
 
 .titre_description {
+	padding-top: 40px;
+	padding-bottom: 20px;
 	text-align: center;
 }
-/* Page driver */ 
 
-.formulaire {
-	width : 700px;
-	margin: 0 auto;
+.bandeau_footer {
+	margin-top: 40px;
 }
 
 .logo_footer {
@@ -52,3 +69,11 @@
 .liste_footer {
 	margin-bottom: 10px;
 }
+
+/* Page driver */ 
+
+.formulaire {
+	width : 700px;
+	margin: 0 auto;
+}
+
