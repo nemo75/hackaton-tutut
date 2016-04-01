@@ -1,4 +1,28 @@
 .logo_accueil {
 	display: block;
 	margin: 0 auto;
+	padding-left: 20%;
+	width: 500px;
+	height: 100px;
+}
+.logo {
+	width: 100%;
+}
+
+.container {
+	background-size: cover;
+	background-image: url(../../capitole.jpg);
+	height: 560px;
+	margin-top: -15px;
+	border-bottom: 2px solid grey;
+}
+
+.titre_slogan{
+	text-align: center;
+	padding-top: 9%;
+	font-family: roboto;
+}
+
+.bandeau_cta {
+	margin-top: 2%;
 }
