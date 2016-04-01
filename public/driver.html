@@ -39,28 +39,49 @@
 			</div>
 			<button class="ui button" type="submit">Submit</button>
 		</form>
-		</form>
-	</div>
+	</form>
+</div>
 <div id="driver"></div>
 
-	<script src="jquery.min.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
-	<script>
-		(function($){
-			var socket = io();
-			
-			$('#form_demande_driver').submit(function(event){
-				event.preventDefault();
-				socket.emit('msg_driver',{
-					first_named: $('#first_name').val(),
-					last_name: $('#last_name').val(),
-				})
-			})
+<!--footer-->
+<div class="ui vertical footer segment fouteur">
+	<div class="ui center aligned container bandeau_footer">
+		<img src="logo.svg" class="ui centered small image logo_footer">
+		<div class="row liste_footer">
+			<div class="ui horizontal small divided link list">
+				<a class="item" href="#">Mentions légales</a>
+				<a class="item" href="#">FAQ</a>
+				<a class="item" href="#">Contactez-nous !</a>
+				<a class="item" href="#">Privacy Policy</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="ui horizontal small divided link list">
+				<a class="ui circular facebook icon button" href="#"><i class="facebook icon"></i></a>
+				<a class="ui circular twitter icon button" href="#"><i class="twitter icon"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
 
-			socket.on('msg_livre', function(message){
-				$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
+<script src="jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	(function($){
+		var socket = io();
+
+		$('#form_demande_driver').submit(function(event){
+			event.preventDefault();
+			socket.emit('msg_driver',{
+				first_named: $('#first_name').val(),
+				last_name: $('#last_name').val(),
 			})
-		})(jQuery);
-	</script>
+		})
+
+		socket.on('msg_livre', function(message){
+			$('#driver').append('<div id="' + message.id + '">' + '<h2>' + message.first_name + '</h2> </div>');
+		})
+	})(jQuery);
+</script>
 </body>
 </html>

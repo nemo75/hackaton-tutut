@@ -16,7 +16,7 @@ body {
 
 .bandeau_slogan {
 	background-size: cover;
-	background-image: url(../../capitole.jpg);
+	background-image: url(../../bandeau.svg);
 	height: 560px;
 	margin-top: -15px;
 	border-bottom: 2px solid grey;
@@ -29,7 +29,7 @@ body {
 }
 
 .bandeau_cta {
-	background-color: #26A69A;
+	background-color: rgba(31, 57, 102, 210);
 	height: 35%;
 }
 
@@ -38,8 +38,7 @@ body {
 }
 
 .bandeau_description {
-	background-color: #66BB6A;
-	opacity: 0,5;
+	background-color: rgba(0, 178, 86, 210);
 }
 
 .titre_description {
@@ -58,6 +57,10 @@ body {
 
 .liste_footer {
 	margin-bottom: 10px;
+}
+
+.fouteur.fouteur.fouteur.fouteur.fouteur {
+	bottom: 0;
 }
 
 /* Page driver */ 
