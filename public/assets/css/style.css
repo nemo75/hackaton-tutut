@@ -1,3 +1,5 @@
+/*  Page accueil */
+
 .logo_accueil {
 	display: block;
 	margin: 0 auto;
@@ -30,4 +32,12 @@
 
 .bandeau_description {
 	margin-top: 2%;
+}
+
+
+/* Page driver */ 
+
+.formulaire {
+	width : 700px;
+	margin: 0 auto;
 }
