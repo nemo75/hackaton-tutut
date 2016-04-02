@@ -10,24 +10,25 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.css">
 </head>
 <body>
-	<!--MENU-->
-	<div class="ui stackable large top fixed menu">
-		<div class="logo">
-			<a href="index.html"> <img class="logo_accueil" src="logo.svg"/> </a>
-		</div>
 
-		<div class="right stackable menu">	
+	<div class="bandeau_slogan" style="background-image: url(../../anim.gif); width: 100%; height: 100%; z-index: 100;">
 
-			<div class="middle aligned content boutons_menu">
-				<a href="#" class="ui violet large button boutons_menu">Inscription</a>		
-				<a href="#" class="ui inverted violet large button boutons_menu">Connexion</a>
+		<!--MENU-->
+		<div class="ui stackable large menu" id="header">
+			<div class="logo" id="tutut">
+				<a href="index.html"> <img class="logo_accueil" src="logo.svg"/> </a>
 			</div>
-
+			<div class="right stackable menu">	
+				<div class="item">
+					<div class="middle aligned content">
+						<a href="404.html" class="ui violet large button boutons_menu">Inscription</a>		
+						<a href="404.html" class="ui inverted violet large button boutons_menu">Connexion</a>		
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 
 
-	<div class="bandeau_slogan">
 		<div class="titre_slogan">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>
@@ -101,10 +102,19 @@
 			</div>
 		</div>
 	</div>
-
+	<audio src="tutut.mp3" id="beep"></audio>
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+
+		$('#tutut').on('click', function(e){
+			e.preventDefault();
+			var sound = document.getElementById("beep");
+
+			sound.play();
+		})
+	</script>
 
 
-		</body>
-		</html>
+</body>
+</html>
