@@ -102,9 +102,9 @@
 						</div>
 						<div class="description">
 							<div class="ui list">
-								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-15, le soir.</li>
-								<li><em><strong>Disponible pour faire</em></strong> : entre 20 et 30 km.</li>
-								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Petit.</li>
+								<li><strong> Disponibilit&eacute; :</strong> 2016-04-15, le soir.</li>
+								<li><strong>Disponible pour faire</strong> : entre 20 et 30 km.</li>
+								<lI><strong>Mon v&eacute;hicule est :</strong> Petit.</li>
 								</div>
 								<div class="extra">
 									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
@@ -123,9 +123,9 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
-									<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
-									<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+									<li><strong> Disponibilit&eacute; :</strong> 2016-04-18, le matin.</li>
+									<li><strong>Disponible pour faire</strong> : entre 0 et 10 km.</li>
+									<li><strong>Mon v&eacute;hicule est :</strong> Grand.</li>
 									</div>
 									<div class="extra">
 										<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
@@ -138,13 +138,13 @@
 			</div>
 		</div>
 
-		
+
 		<!--Liste des annonces de recherche-->
 		<div class="ui stackable centered grid" id ="list_livre" style="display:none;">
 			<div class="eight wide column bloc_annonces">
 				<div class="ui success message">
-					<div class="header">Form Completed</div>
-					<p>You're all signed up for the newsletter.</p>
+					<div class="header">Votre annonce a &eacute;t&eacute; prise en compte !</div>
+					<p>Vous serez notifi&eacute; par mail d&egrave;s qu'un driver sera int&eacute;r&eacute;ss&eacute;e.</p>
 				</div>
 
 				<h3 class="ui centered dividing header">Les annonces recherche</h3>
@@ -161,10 +161,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -187,10 +187,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -213,10 +213,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -290,7 +290,7 @@
 			})
 
 			socket.on('msg_livre', function(message){
-				$('#livre').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+ message.first_named+ ' '+ message.last_name + '</a><div class="meta"><span class="cinema">Posté il y a deux jours</span></div><div class="description"><div class="ui list"><li><em><strong>Date :</strong></em>'+ message.date + ','+ message.heure +'</li><li><em><strong>D&eacute;part : </strong></em>'+ message.depart+'</li><li><em><strong>Arriv&eacute;e</strong></em> '+message.arrivee+'</li><li><em><strong>Mes/Mon objet(s) &agrave; transport&eacute;(s) : </strong></em>'+'Je poss&eacute;de'+ ' ' +message.nombre+ ' ' + 'objet(s) &agrave; transporter'+ ' '+'('+message.objet+')'+'</li></div></div><div class="extra"><div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div></div></div></div>');
+				$('#livre').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+ message.first_named+ ' '+ message.last_name + '</a><div class="meta"><span class="cinema">Posté il y a deux jours</span></div><div class="description"><div class="ui list"><li><strong>Date :</strong>'+ message.date + ','+ message.heure +'</li><li><strong>D&eacute;part : </strong>'+ message.depart+'</li><li><strong>Arriv&eacute;e</strong> '+message.arrivee+'</li><li><strong>Mes/Mon objet(s) &agrave; transport&eacute;(s) : </strong>'+'Je poss&eacute;de'+ ' ' +message.nombre+ ' ' + 'objet(s) &agrave; transporter'+ ' '+'('+message.objet+')'+'</li></div></div><div class="extra"><div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div></div></div></div>');
 			})
 		})(jQuery);
 	</script>
