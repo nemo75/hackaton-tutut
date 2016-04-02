@@ -21,6 +21,10 @@ body {
 	width: 500px;
 	height: 100px;
 }
+label {
+	font-size: 1.3em;
+	font-family: Helvetica;
+}
 .logo {
 	width: 100%;
 	padding-top: 5px;
@@ -103,8 +107,35 @@ body {
 li{
 	margin:10px;
 	font-size: 1.2em;
-	font-family: Roboto;
+	font-family: Helvetica;
 	font-weight: 500;	
+}
+.icon_taille_petit.icon_taille_petit.icon_taille_petit.icon_taille_petit {
+	border: 2px solid green;
+	border-radius: 2px;
+	margin-right: 5px;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.icon_taille_moyen.icon_taille_moyen.icon_taille_moyen.icon_taille_moyen{
+	border: 2px solid red;
+	border-radius: 2px;
+	margin-right: 5px;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.icon_taille_grand.icon_taille_grand.icon_taille_grand.icon_taille_grand.icon_taille_grand {
+	border: 2px solid blue;
+	border-radius: 2px;
+	margin-right: 5px;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 /* Page 404 */
@@ -119,6 +150,6 @@ li{
 .error {
 	margin-top: 13%;
     text-align: center;
-    font-family: Roboto;
+    font-family: Helvetica;
     color: grey;
 }

@@ -24,12 +24,12 @@
 		</div>
 	</div>
 
-<!-- Formulaire pour ceux qui proposent-->
+	<!-- Formulaire pour ceux qui proposent-->
 
-	<div class="formulaire" id="form_driver">
-		<form class="ui form" action="" method="post" id="form_demande_driver">
-			<h4 class="ui centered dividing header">Je propose mes services</h4>
-			<label>Identit&eacute;</label>
+	<div class="formulaire" id="form_driver" style="padding: 50px;"> 
+		<form class="ui relaxed form" action="" method="post" id="form_demande_driver">
+			<h1 class="ui centered dividing header">JE PROPOSE MES SERVICES</h1>
+			<label>Pr&eacute;nom, Nom</label>
 			<div class="two fields">
 				<div class="field">
 					<input type="text" name="first-name" placeholder="Pr&eacute;nom" id="first_name">
@@ -47,7 +47,7 @@
 					<input type="text" placeholder="Ton num&eacute;ro ...">
 				</div>
 			</div>
-			<label>Disponibilit&eacute;</label>
+			<label>Je suis plutot disponible</label>
 			<div class="two fields">
 				<div class="field">
 					<input type="date" name="first-name" placeholder="Date" id="date">
@@ -61,7 +61,7 @@
 				</div>
 			</div>
 
-			<label for="">Je suis pret &agrave; faire :</label>
+			<label for="">Je suis pret &agrave; faire</label>
 			<div class="field">
 				<select class="ui fluid search dropdown" name="distance" id="distance">
 					<option value="entre 0 et 10 km.">0 &agrave; 10 kilom&egrave;tre</option>
@@ -69,13 +69,17 @@
 					<option value="entre 20 et 30 km.">20 &agrave; 30 kilom&egrave;tre</option>
 				</select>
 			</div>
-			<label for="">Mon vehicule est</label>
-			<div class="field">
-				<select class="ui fluid search dropdown" name="distance" id="taille">
-					<option value="Petit.">Petit</option>
-					<option value="Moyenne.">Moyen</option>
-					<option value="Grand.">Grand</option>
-				</select>
+			<label for="">Cliquez sur le type  v&eacute;hicule que vous proposez</label>
+			<div class="three fields">
+				<div class="ui field" id="petit">
+					<img class="ui  tiny image petite" src="petit.png" alt="icon_petit">
+				</div>
+				<div class="field" id="moyen">
+					<img class="ui tiny image moyen" src="moyen.png" alt="" id="moyen">
+				</div>
+				<div class="field" id="grand">
+					<img class="ui tiny image grand" src="grand.png" alt="" id="grand">
+				</div>
 			</div>
 			<button class="ui green button" type="submit">Valider</button>
 		</form>
@@ -84,7 +88,7 @@
 
 
 	<!-- Annonces de ceux qui proposent -->
-		
+
 	<div class="ui stackable centered grid" id="list_driver" style="display:none;">
 		<div class="eight wide column bloc_annonces">
 
@@ -116,157 +120,169 @@
 							</div>
 						</div>
 					</div>
-				<div class="item">
-					<div class="image">
-						<img src="card.jpg">
-					</div>
-					<div class="content">
-						<a class="header">Guillaume Dorcel - 5/5</a>
-						<div class="meta">
-							<span class="cinema">Posté il y &agrave; 1 jour</span>
+					<div class="item">
+						<div class="image">
+							<img src="card.jpg">
 						</div>
-						<div class="description">
-							<div class="ui list">
-								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
-								<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
-								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+						<div class="content">
+							<a class="header">Guillaume Dorcel - 5/5</a>
+							<div class="meta">
+								<span class="cinema">Posté il y &agrave; 1 jour</span>
+							</div>
+							<div class="description">
+								<div class="ui list">
+									<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
+									<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
+									<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+									</div>
+									<div class="extra">
+										<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
+									</div>
 								</div>
-								<div class="extra">
-									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Les annonces de ceux qui recherchent-->
+
+		<div class="ui stackable centered grid" id ="list_livre">
+			<div class="eight wide column bloc_annonces">
+				<h3 class="ui centered dividing header">Les annonces de recherche</h3>
+				<div class="ui divided items">
+
+					<div class="item">
+						<div class="image">
+							<img src="card.jpg">
+						</div>
+						<div class="content">
+							<a class="header">Gerard Lanvin</a>
+							<div class="meta">
+								<span class="cinema">Posté il y a deux jours</span>
+							</div>
+							<div class="description">
+								<div class="ui list">
+									<li><em><strong>Date :</strong></em> 2016-04-09</li>
+									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
+							<div class="extra">
+								<div class="ui right floated primary button">
+									Réserver ce trajet
+									<i class="right chevron icon"></i>
+								</div>
+
+							</div>
 						</div>
+					</div>
+					<div class="item">
+						<div class="image">
+							<img src="card.jpg">
+						</div>
+						<div class="content">
+							<a class="header">Gerard Lanvin</a>
+							<div class="meta">
+								<span class="cinema">Posté il y a deux jours</span>
+							</div>
+							<div class="description">
+								<div class="ui list">
+									<li><em><strong>Date :</strong></em> 2016-04-09</li>
+									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+								</div>
+							</div>
+							<div class="extra">
+								<div class="ui right floated primary button">
+									Réserver ce trajet
+									<i class="right chevron icon"></i>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="image">
+							<img src="card.jpg">
+						</div>
+						<div class="content">
+							<a class="header">Gerard Lanvin</a>
+							<div class="meta">
+								<span class="cinema">Posté il y a deux jours</span>
+							</div>
+							<div class="description">
+								<div class="ui list">
+									<li><em><strong>Date :</strong></em> 2016-04-09</li>
+									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+								</div>
+							</div>
+							<div class="extra">
+								<div class="ui right floated primary button">
+									Réserver ce trajet
+									<i class="right chevron icon"></i>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--footer-->
+		<div class="ui vertical footer bottom attached segment fouteur">
+			<div class="ui center aligned container bandeau_footer">
+				<img src="logo.svg" class="ui centered small image logo_footer">
+				<div class="row liste_footer">
+					<div class="ui horizontal small divided link list">
+						<a class="item" href="#">Mentions légales</a>
+						<a class="item" href="#">FAQ</a>
+						<a class="item" href="#">Contactez-nous !</a>
+						<a class="item" href="#">Privacy Policy</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="ui horizontal small divided link list">
+						<a class="ui circular facebook icon button" href="https://www.facebook.com/Tutut-1677656342511349/?fref=ts" target="blank"><i class="facebook icon"></i></a>
+						<a class="ui circular twitter icon button" href="https://twitter.com/search?q=tutut&src=typd&lang=fr" target="blank"><i class="twitter icon"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-<!--Les annonces de ceux qui recherchent-->
+		<!-- <script src="assets/moment.js"></script> -->
+		<script src="jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+				d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+					_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+					$.src="//v2.zopim.com/?3oDcsSGvvPyA4IFg9Dd2C7HTSaYOBa62";z.t=+new Date;$.
+					type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+				</script>
+				<script>
+					(function($){
 
-	<div class="ui stackable centered grid" id ="list_livre">
-		<div class="eight wide column bloc_annonces">
-			<h3 class="ui centered dividing header">Les annonces de recherche</h3>
-			<div class="ui divided items">
+			$('#petit').on('click', function(){
+				$('.petite').toggleClass('icon_taille_petit');
+			});
+			$('#moyen').on('click', function(){
+				$('.moyen').toggleClass('icon_taille_moyen');
+			});
+			$('#grand').on('click', function(){
+				$('.grand').toggleClass('icon_taille_grand');
+			});
 
-				<div class="item">
-					<div class="image">
-						<img src="card.jpg">
-					</div>
-					<div class="content">
-						<a class="header">Gerard Lanvin</a>
-						<div class="meta">
-							<span class="cinema">Posté il y a deux jours</span>
-						</div>
-						<div class="description">
-							<div class="ui list">
-								<li><em><strong>Date :</strong></em> 2016-04-09</li>
-								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
-							</div>
-						</div>
-						<div class="extra">
-							<div class="ui right floated primary button">
-								Réserver ce trajet
-								<i class="right chevron icon"></i>
-							</div>
 
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image">
-						<img src="card.jpg">
-					</div>
-					<div class="content">
-						<a class="header">Gerard Lanvin</a>
-						<div class="meta">
-							<span class="cinema">Posté il y a deux jours</span>
-						</div>
-						<div class="description">
-							<div class="ui list">
-								<li><em><strong>Date :</strong></em> 2016-04-09</li>
-								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
-							</div>
-						</div>
-						<div class="extra">
-							<div class="ui right floated primary button">
-								Réserver ce trajet
-								<i class="right chevron icon"></i>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image">
-						<img src="card.jpg">
-					</div>
-					<div class="content">
-						<a class="header">Gerard Lanvin</a>
-						<div class="meta">
-							<span class="cinema">Posté il y a deux jours</span>
-						</div>
-						<div class="description">
-							<div class="ui list">
-								<li><em><strong>Date :</strong></em> 2016-04-09</li>
-								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
-							</div>
-						</div>
-						<div class="extra">
-							<div class="ui right floated primary button">
-								Réserver ce trajet
-								<i class="right chevron icon"></i>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--footer-->
-	<div class="ui vertical footer bottom attached segment fouteur">
-		<div class="ui center aligned container bandeau_footer">
-			<img src="logo.svg" class="ui centered small image logo_footer">
-			<div class="row liste_footer">
-				<div class="ui horizontal small divided link list">
-					<a class="item" href="#">Mentions légales</a>
-					<a class="item" href="#">FAQ</a>
-					<a class="item" href="#">Contactez-nous !</a>
-					<a class="item" href="#">Privacy Policy</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="ui horizontal small divided link list">
-					<a class="ui circular facebook icon button" href="https://www.facebook.com/Tutut-1677656342511349/?fref=ts" target="blank"><i class="facebook icon"></i></a>
-					<a class="ui circular twitter icon button" href="https://twitter.com/search?q=tutut&src=typd&lang=fr" target="blank"><i class="twitter icon"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- <script src="assets/moment.js"></script> -->
-	<script src="jquery.min.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
-	<script type="text/javascript">
-		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-				_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-				$.src="//v2.zopim.com/?3oDcsSGvvPyA4IFg9Dd2C7HTSaYOBa62";z.t=+new Date;$.
-				type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-			</script>
-			<script>
-				(function($){
-					var socket = io();
-					var msgtpl = $('#msgtpl').html();
+						var socket = io();
+						var msgtpl = $('#msgtpl').html();
 			// var moment = require('moment');
 			$('#msgtpl').remove();
 
