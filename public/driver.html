@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Driver</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="semantic.min.css">
@@ -27,7 +28,7 @@
 	<!-- Formulaire pour ceux qui proposent-->
 
 	<div class="formulaire" id="form_driver" style="padding: 50px;"> 
-		<form class="ui relaxed form" action="" method="post" id="form_demande_driver">
+		<form class="ui stackable form" action="" method="post" id="form_demande_driver">
 			<h1 class="ui centered dividing header">JE PROPOSE MES SERVICES</h1>
 			<label>Pr&eacute;nom, Nom</label>
 			<div class="two fields">
@@ -72,13 +73,13 @@
 			<label for="">Cliquez sur le type  v&eacute;hicule que vous proposez</label>
 			<div class="three fields">
 				<div class="ui field" id="petit">
-					<img class="ui  tiny image petite" src="petit.png" alt="icon_petit">
+					<img class="ui  tiny image petite" src="petit.png" alt="icon_petit"  id="taille_petit" sizee="Petit">
 				</div>
 				<div class="field" id="moyen">
-					<img class="ui tiny image moyen" src="moyen.png" alt="" id="moyen">
+					<img class="ui tiny image moyen" src="moyen.png" alt="" value="moyen" id="taille" size="Moyen">
 				</div>
 				<div class="field" id="grand">
-					<img class="ui tiny image grand" src="grand.png" alt="" id="grand">
+					<img class="ui tiny image grand" src="grand.png" alt="" value="grand" id="taille" sizeee="Grand">
 				</div>
 			</div>
 			<button class="ui green button" type="submit">Valider</button>
@@ -93,8 +94,8 @@
 		<div class="eight wide column bloc_annonces">
 
 			<div class="ui success message">
-				<div class="header">Form Completed</div>
-				<p>You're all signed up for the newsletter.</p>
+				<div class="header">Votre annonce a &eacute;t&eacute; prise en compte !</div>
+				<p>Vous serez notifi&eacute; par mail d&egrave;s qu'une personne sera int&eacute;r&eacute;ss&eacute;e.</p>
 			</div>
 
 			<h3 class="ui centered dividing header">Les annonces de ceux qui proposent</h3>
@@ -110,9 +111,9 @@
 						</div>
 						<div class="description">
 							<div class="ui list">
-								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-15, le soir.</li>
-								<li><em><strong>Disponible pour faire</em></strong> : entre 20 et 30 km.</li>
-								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Petit.</li>
+								<li><strong> Disponibilit&eacute; :</strong> 2016-04-15, le soir.</li>
+								<li><strong>Disponible pour faire</strong> : entre 20 et 30 km.</li>
+								<lI><strong>Mon v&eacute;hicule est :</strong> Petit.</li>
 								</div>
 								<div class="extra">
 									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
@@ -131,9 +132,9 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
-									<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
-									<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+									<li><strong> Disponibilit&eacute; :</strong> 2016-04-18, le matin.</li>
+									<li><strong>Disponible pour faire</strong> : entre 0 et 10 km.</li>
+									<lI><strong>Mon v&eacute;hicule est :</strong> Grand.</li>
 									</div>
 									<div class="extra">
 										<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
@@ -164,10 +165,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -190,10 +191,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -216,10 +217,10 @@
 							</div>
 							<div class="description">
 								<div class="ui list">
-									<li><em><strong>Date :</strong></em> 2016-04-09</li>
-									<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
-									<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
-									<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+									<li><strong>Date :</strong> 2016-04-09</li>
+									<li><strong>D&eacute;part : </strong>37 rue paul jacques 31000 Toulouse</li>
+									<li><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</li>
+									<li><strong>Nombre d'objets : </strong>2 (Un bureau, une chaise)</li>
 								</div>
 							</div>
 							<div class="extra">
@@ -294,7 +295,7 @@
 					heure: $('#heure').val(),
 					date: $('#date').val(),
 					distance: $('#distance').val(),
-					taille: $('#taille').val(),
+					taille: $('#taille_petit').attr('sizee')
 				}),
 				$('#list_driver').show();
 				$('#list_livre').hide();
@@ -307,7 +308,7 @@
 				//  	message : message
 				//  },
 				// Mustache.render(msgtpl, rr)
-				$('#driver').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+  message.first_named + ' ' + message.last_name + ' - '+ '5/5' + '</a><div class="meta"><span class="cinema">Posté a l\'instant</span></div><div class="description"><div class="ui list"><li><em><strong> Disponibilit&eacute; :</strong></em> ' + message.date + ', '+ message.heure + '.' + '</li><li><em><strong>Disponible pour faire</em></strong> : ' + message.distance + '</li><em><strong>Mon v&eacute;hicule est :</em></strong> ' + message.taille + '</div></div><div class="extra"><div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div></div></div></div>');
+				$('#driver').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+  message.first_named + ' ' + message.last_name + ' - '+ '5/5' + '</a><div class="meta"><span class="cinema">Posté a l\'instant</span></div><div class="description"><div class="ui list"><li><strong> Disponibilit&eacute; :</strong> ' + message.date + ', '+ message.heure + '.' + '</li><li><strong>Disponible pour faire</strong> : ' + message.distance + '</li><li><strong>Mon v&eacute;hicule est :</strong>' + message.taille + " " +'</li></div></div><div class="extra"><div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div></div></div></div>');
 			})
 		})(jQuery);
 	</script>
