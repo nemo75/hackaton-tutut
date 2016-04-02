@@ -5,17 +5,12 @@ var io = require('socket.io').listen(server);
 // var moment = require('moment');
 
 
+
 app.use(express.static(__dirname + '/public'));
 server.listen(8000);
 
 io.sockets.on('connection', function(socket) {
 
-	// for(var k in messages_driver) {
-	// 	socket.emit('msg_driver', messages_driver[k]);
-	// }
-	// for(var k in messages_livre) {
-	// 	socket.emit('msg_livre', messages_livre[k]);
-	// }
 
 	socket.on('msg_livre', function(message){
 		me = message;
@@ -29,3 +24,4 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.emit('msg_driver', me);
 	});
 });
+

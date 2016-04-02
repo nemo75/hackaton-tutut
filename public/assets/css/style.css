@@ -1,8 +1,17 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
-
+#header {
+	padding-top: 15px;
+	padding-right: 35px;
+}
 .logo_accueil {
 	display: block;
 	margin: 0 auto;
@@ -22,7 +31,6 @@ body {
 
 .bandeau_slogan {
 	background-size: cover;
-	background-image: url(../../bandeau.svg);
 	height: 560px;
 	margin-top: -15px;
 }
@@ -91,4 +99,20 @@ li{
 	font-size: 1.2em;
 	font-family: Roboto;
 	font-weight: 500;	
+}
+
+/* Page 404 */
+
+.findusite.findusite.findusite.findusite.findusite.findusite.findusite.findusite {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.error {
+	margin-top: 13%;
+    text-align: center;
+    font-family: Roboto;
+    color: grey;
 }
