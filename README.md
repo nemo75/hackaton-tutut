@@ -4,7 +4,7 @@ Le service qui vous permet de mutualiser l'utilisation de véhicules entre parti
 
 # Instructions
 
-`code`git clone https://github.com/nemo75/hackaton-tutut.git
-`code` npm install
+`git clone https://github.com/nemo75/hackaton-tutut.git`
+`npm install`
 
 TuTuT !!!!
