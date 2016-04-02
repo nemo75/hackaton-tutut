@@ -108,7 +108,7 @@
 								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Petit.</li>
 								</div>
 								<div class="extra">
-									<div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div>
+									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
 								</div>
 							</div>
 						</div>
@@ -129,7 +129,7 @@
 								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
 								</div>
 								<div class="extra">
-									<div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div>
+									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
 								</div>
 							</div>
 						</div>
@@ -156,10 +156,62 @@
 						</div>
 						<div class="description">
 							<div class="ui list">
-								<li><em><strong>Date :</strong></em></li>
-								<li><em><strong>D&eacute;part : </strong></em></li>
-								<li><em><strong>Arriv&eacute;e</strong></em></li>
-								<li><em><strong>Nombre d'objets :</strong></em></li>
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Gerard Lanvin</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a deux jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Gerard Lanvin</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a deux jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
 							</div>
 						</div>
 						<div class="extra">
@@ -200,10 +252,17 @@
 	<!-- <script src="assets/moment.js"></script> -->
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
-	<script>
-		(function($){
-			var socket = io();
-			var msgtpl = $('#msgtpl').html();
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+				_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+				$.src="//v2.zopim.com/?3oDcsSGvvPyA4IFg9Dd2C7HTSaYOBa62";z.t=+new Date;$.
+				type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+			</script>
+			<script>
+				(function($){
+					var socket = io();
+					var msgtpl = $('#msgtpl').html();
 			// var moment = require('moment');
 			$('#msgtpl').remove();
 
@@ -228,7 +287,7 @@
 				//  	message : message
 				//  },
 				// Mustache.render(msgtpl, rr)
-				$('#driver').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+  message.first_named + ' ' + message.last_name + ' - '+ '5/5' + '</a><div class="meta"><span class="cinema">Posté a l\'instant</span></div><div class="description"><div class="ui list"><li><em><strong> Disponibilit&eacute; :</strong></em> ' + message.date + ', '+ message.heure + '.' + '</li><li><em><strong>Disponible pour faire</em></strong> : ' + message.distance + '</li><em><strong>Mon v&eacute;hicule est :</em></strong> ' + message.taille + '</div></div><div class="extra"><div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div></div></div></div>');
+				$('#driver').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+  message.first_named + ' ' + message.last_name + ' - '+ '5/5' + '</a><div class="meta"><span class="cinema">Posté a l\'instant</span></div><div class="description"><div class="ui list"><li><em><strong> Disponibilit&eacute; :</strong></em> ' + message.date + ', '+ message.heure + '.' + '</li><li><em><strong>Disponible pour faire</em></strong> : ' + message.distance + '</li><em><strong>Mon v&eacute;hicule est :</em></strong> ' + message.taille + '</div></div><div class="extra"><div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div></div></div></div>');
 			})
 		})(jQuery);
 	</script>

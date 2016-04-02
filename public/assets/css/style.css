@@ -86,3 +86,9 @@ body {
 	margin: 40px;
 }
 
+li{
+	margin:10px;
+	font-size: 1.2em;
+	font-family: Roboto;
+	font-weight: 500;	
+}

@@ -24,31 +24,202 @@
 			</div>
 		</div>
 	</div>
-	<div class="formulaire">
-		<form class="ui form" action="driver.html" method="post" id="form_demande_livre">
-			<div class="field">
-				<label>First Name</label>
-				<input type="text" name="first-name" placeholder="First Name" id="first_name">
-			</div>
-			<div class="field">
-				<label>Last Name</label>
-				<input type="text" name="last-name" placeholder="Last Name" id="last_name">
-			</div>
-			<div class="field">
-				<div class="ui checkbox">
-					<input type="checkbox" tabindex="0" class="hidden">
-					<label>I agree to the Terms and Conditions</label>
+	<div class="formulaire" id="form_livre">
+		<form class="ui form"  method="post" id="form_demande_livre">
+			<h4 class="ui centered dividing header">Je recherche un driver</h4>
+			<label>Identit&eacute;e</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="text" name="first-name" placeholder="Pr&eacute;nom" id="first_name">
+				</div>
+				<div class="field">
+					<input type="text" name="last-name" placeholder="Nom de famille..." id="last_name">
 				</div>
 			</div>
-			<a href="driver.html" class="ui button" type="submit">Submit</a>
+			<label>Adresses</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="text" name="depart" placeholder="D&eacute;part" id="depart">
+				</div>
+				<div class="field">
+					<input type="text" name="arrivee" placeholder="Arriv&eacute;e" id="arrivee">
+				</div>
+			</div>
+			<label>Disponibilit&eacute;e</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="date" name="date" placeholder="Date" id="date">
+				</div>
+				<div class="field">
+					<select class="ui fluid search dropdown" name="distance" id="heure">
+						<option value="le matin">Matin</option>
+						<option value="l'apres-midi">Apr&egrave;s-midi</option>
+						<option value="le soir">Soir</option>
+					</select>
+				</div>
+			</div>
+			<label>Mes obets a transport&eacute;s</label>
+			<div class="two fields">
+				<div class="field">
+					<input type="text" name="obj" placeholder="Une chaise, une table, un bureau..." id="objet">
+				</div>
+				<div class="field">
+					<select class="ui fluid search dropdown" name="distance" id="nombre">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3+">3+</option>
+					</select>
+				</div>
+			</div>
+			<button class="ui green button" type="submit">Valider</button>
 		</form>
 	</div>
-	<div id="test"></div>
-<!-- 	<div id="messages">
-		<div class="message" id= "msgtpl">
-			<h3 style=color:red>{{message.first_named}}</h3>
-		</div>    
-	</div> -->
+
+	<div class="ui stackable centered grid" id="list_driver">
+		<div class="eight wide column bloc_annonces">
+			<h3 class="ui centered dividing header">Les drivers disponible</h3>
+			<div class="ui divided items" id ="driver">	
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Marie dupuis - 5/5</a>
+						<div class="meta">
+							<span class="cinema">Posté il y &agrave; 3 jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-15, le soir.</li>
+								<li><em><strong>Disponible pour faire</em></strong> : entre 20 et 30 km.</li>
+								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Petit.</li>
+								</div>
+								<div class="extra">
+									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Guillaume Dorcel - 5/5</a>
+						<div class="meta">
+							<span class="cinema">Posté il y &agrave; 1 jour</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong> Disponibilit&eacute; :</strong></em> 2016-04-18, le matin.</li>
+								<li><em><strong>Disponible pour faire</em></strong> : entre 0 et 10 km.</li>
+								<lI><em><strong>Mon v&eacute;hicule est :</em></strong> Grand.</li>
+								</div>
+								<div class="extra">
+									<div class="ui right floated primary button">Réserver ce driver<i class="right chevron icon"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ui stackable centered grid" id ="list_livre" style="display:none;">
+		<div class="eight wide column bloc_annonces">
+			<div class="ui success message">
+				<div class="header">Form Completed</div>
+				<p>You're all signed up for the newsletter.</p>
+			</div>
+			<h3 class="ui centered dividing header">Les annonces recherche</h3>
+			<div class="ui divided items" id="livre">
+
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Gerard Lanvin</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a deux jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Gerard Lanvin</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a deux jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="card.jpg">
+					</div>
+					<div class="content">
+						<a class="header">Gerard Lanvin</a>
+						<div class="meta">
+							<span class="cinema">Posté il y a deux jours</span>
+						</div>
+						<div class="description">
+							<div class="ui list">
+								<li><em><strong>Date :</strong></em> 2016-04-09</li>
+								<li><em><strong>D&eacute;part : </strong></em>37 rue paul jacques 31000 Toulouse</li>
+								<li><em><strong>Arriv&eacute;e</strong> 72 rue jacques paul 31000 Toulouse</em></li>
+								<li><em><strong>Nombre d'objets : </strong></em>2 (Un bureau, une chaise)</li>
+							</div>
+						</div>
+						<div class="extra">
+							<div class="ui right floated primary button">
+								Réserver ce trajet
+								<i class="right chevron icon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
 
 	<!--footer-->
 	<div class="ui vertical footer bottom attached segment fouteur">
@@ -73,42 +244,40 @@
 
 	<script src="jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
-	<script>
-		(function($){
-			var socket = io();
-			var msgtpl = $('#msgtpl').html();
-			var moment = require('moment');
+	<script type="text/javascript">
+		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+				_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+				$.src="//v2.zopim.com/?3oDcsSGvvPyA4IFg9Dd2C7HTSaYOBa62";z.t=+new Date;$.
+				type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+			</script>
+			<script>
+								(function($){
+					var socket = io();
+					var msgtpl = $('#msgtpl').html();
+			// var moment = require('moment');
 			$('#msgtpl').remove();
-			
+
 			$('#form_demande_livre').submit(function(event){
 				event.preventDefault();
 				socket.emit('msg_livre',{
-					first_name: $('#first_name').val(),
+					first_named: $('#first_name').val(),
 					last_name: $('#last_name').val(),
-				})
+					heure: $('#heure').val(),
+					date: $('#date').val(),
+					depart: $('#depart').val(),
+					arrivee: $('#arrivee').val(),
+					nombre: $('#nombre').val(),
+					objet: $('#objet').val(),	
+				}),
+				$('#list_driver').hide();
+				$('#list_livre').show();
+				$('#form_livre').hide();
 			})
 
 			socket.on('msg_livre', function(message){
-				// Mustache.render(msgtpl, message);
-				$('#test').append('<div>'+ '<h2>' + message.first_named + '</h2> </div>');
+				$('#livre').prepend('<div class="item"><div class="image"><img src="card.jpg"></div><div class="content"><a class="header">'+ message.first_named+ ' '+ message.last_name + '</a><div class="meta"><span class="cinema">Posté il y a deux jours</span></div><div class="description"><div class="ui list"><li><em><strong>Date :</strong></em>'+ message.date + ','+ message.heure +'</li><li><em><strong>D&eacute;part : </strong></em>'+ message.depart+'</li><li><em><strong>Arriv&eacute;e</strong></em> '+message.arrivee+'</li><li><em><strong>Mes/Mon objet(s) &agrave; transport&eacute;(s) : </strong></em>'+'Je poss&eacute;de'+ ' ' +message.nombre+ ' ' + 'objet(s) &agrave; transport&eacute;(s)'+ ' '+'('+message.objet+')'+'</li></div></div><div class="extra"><div class="ui right floated primary button">Réserver ce trajet<i class="right chevron icon"></i></div></div></div></div>');
 			})
-			
-
-				// rr = {
-				// 	message : message
-				// }
-			// $('#messages').append('<div class="message">' +  Mustache.render(msgtpl, rr) +'</div>');
-
-
-
-
-			// socket.on('stackmsg', function(messsage){
-			// 	console.log(msgtpl)
-			// 	Mustache.render(msgtpl, message);
-			// 	$('#msgtpl').append('<div class="message">' +  Mustache.render(msgtpl, message) + salut + '</div>');
-			// })
-
-
 		})(jQuery);
 	</script>
 	<script src="mustache.js"></script>
