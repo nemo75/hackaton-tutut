@@ -23,6 +23,8 @@ body {
 }
 .logo {
 	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .boutons_menu.boutons_menu.boutons_menu.boutons_menu.boutons_menu {
@@ -35,10 +37,13 @@ body {
 	margin-top: -15px;
 }
 
+
+
 .titre_slogan{
+	font-weight: bold;
 	text-align: center;
-	padding-top: 9%;
-	font-size: 30px;
+	padding-top: 7%;
+	font-size: 40px;
 	font-family: Open Sans;
 }
 
@@ -79,9 +84,10 @@ body {
 }
 
 .titre_boutons {
+	color: white;
 	font-size: 30px;
 	font-family: Open Sans;
-	padding-top: 40px;
+	padding-top: 44px;
 }
 /* Page driver */ 
 
